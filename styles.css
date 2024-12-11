@@ -1,0 +1,717 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* nav style */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 13vh;
+}
+.navbar:hover {
+  color: pink;
+}
+.navbar .logo {
+  height: 50px;
+}
+.navlinks {
+  display: flex;
+  list-style: none;
+}
+.navlinks li {
+  margin: 0 15px;
+}
+.navlinks a {
+  text-decoration: none;
+  color: palevioletred;
+  font-weight: bold;
+}
+.navlinks a:hover {
+  color: pink;
+
+  padding: 10px;
+  border-radius: 5px;
+}
+.navicons {
+  display: flex;
+  list-style: none;
+}
+.navicons li {
+  margin: 0 15px;
+}
+.navlinks a {
+  /* text-decoration: none; */
+  color: palevioletred;
+  font-weight: bold;
+}
+.navlinks a:hover {
+  color: pink;
+
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Hero section */
+
+#hero {
+  align-items: center;
+  padding: 0px;
+  position: relative;
+  width: 100%;
+  height: 140vh;
+  background-image: url("/assets/kriti.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.firsttext {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  /* color:; */
+  text-align: center;
+}
+.firstheading {
+  display: flex;
+  font-size: 68px;
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-weight: 700; /* Bold weight */
+}
+.firstpara {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+/* icon-bar section */
+.icon-bar {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px;
+  border-radius: 10px;
+  position: fixed;
+  right: 10px; /* Adjust distance from the right */
+  top: 50%;
+  transform: translateY(-50%); /* Vertical centering */
+}
+
+/* Icon Item Styling */
+.icon-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.icon-item i {
+  font-size: 1.5rem;
+}
+
+/* Hover Effect: Show Text Outside Bar */
+.icon-item:hover {
+  color: #ffd700; /* Change icon color on hover */
+}
+
+.icon-item:hover .icon-text {
+  opacity: 1;
+  transform: translateX(-120%);
+}
+
+/* Icon Text Styling (Hidden by Default) */
+.icon-text {
+  position: absolute;
+  left: -150%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 1px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+}
+
+/* services-style */
+#hoverimages {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-around;
+  padding: 5%;
+}
+.image-box {
+  position: relative;
+  width: 275px; /* Set box width */
+  height: 262px; /* Set box height */
+  overflow: hidden;
+  /* border-radius: 10px;  */
+  background: #f4f4f4; /* Optional background for contrast */
+}
+
+.image-box img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the image */
+  width: 275px; /* Set image width */
+  height: 262px; /* Set image height */
+  object-fit: cover; /* Ensures proper scaling */
+  transition: opacity 0.5s ease-in-out;
+}
+
+.image-box img.second-image {
+  opacity: 0;
+}
+
+.image-box:hover img.first-image {
+  opacity: 0;
+}
+
+.image-box:hover img.second-image {
+  opacity: 1;
+}
+.paragraph {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  height: 90px;
+  width: 215px;
+}
+
+/* Second Hero style */
+#secondhero {
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 140vh;
+  background-image: url("/assets/womentwo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.secondimg {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.secondheading {
+  display: flex;
+  font-size: 68px;
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+.secondheadpara {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+}
+
+/* Team-members Style */
+.third {
+  margin: 7%;
+}
+.thirdheading {
+  font-family: "Montserrat";
+  color: #363636;
+  letter-spacing: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.team-container {
+  display: flex;
+  justify-content: space-around;
+  justify-content: center;
+  gap: 90px;
+  margin-top: px;
+}
+.t-box {
+  text-align: center;
+  width: 400px;
+}
+.t-box img {
+  width: 100%;
+  height: auto;
+}
+.t-box h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: #333;
+}
+.t-box p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Client-Reviews */
+#quotes{
+    text-align: center;
+}
+ .container{
+    background-color:rgb(253, 230, 235);
+    
+ }
+
+.h2{
+    display: flex;
+    font-size: 100px;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+      
+}
+.p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+    height: 90px;
+    width: 215px;
+    justify-content: center;
+}
+.client {
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically */
+    text-align: center; /* Centers text content */
+    margin: 0 auto; /* Centers the entire .client container within its parent */
+    height: 100%; /* Optional: Adjust as needed */
+    padding: 20px; /* Optional: Adds space inside the container */
+}
+
+.client img {
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto;
+    /* border-radius: 50%; Optional: Makes the image circular */
+    margin-bottom: 15px; /* Adds space below the image */
+}
+
+.client h2 {
+    margin-top: 10px; /* Adjust spacing above the heading */
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+#thirdhero{
+    align-items: center;
+    padding:0 ;
+    margin: 2%;
+    position: relative;
+    width: 100vw;
+    height: 100vh; /* Full screen height */
+    background-image: url('/assets/kritithree.jpg');
+    background-size: cover; /* Make the background image cover the whole area */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed;
+}
+.thirdherotext{
+    
+    position: absolute;
+    top: 27%; /* Center the text vertically */
+    left: 15%; /* Center the text horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+    /* color:; Text color */
+    text-align: center; /* Center the text */
+}
+h1 {
+    
+    display: flex;
+    font-size: 68px;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700; 
+   
+    
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+    
+}
+.product{
+    margin-top: 3%;
+    height: 90%;
+    width: 40%;
+    margin-left: 10%;
+}
+.auto-scroll-container {
+    margin-top: 5%;
+    width: 100%; /* Full-width container */
+    overflow: hidden; /* Hide overflowing content */
+    position: relative;
+    background-color: #f0f0f0; /* Optional background */
+}
+
+.auto-scroll-content {
+    display: flex; /* Align items horizontally */
+    gap: 0; /* No gap between items */
+    animation: scrollX 20s linear infinite; /* Animation for scrolling */
+}
+
+.auto-scroll-content img {
+    width: 100%; /* Set images to fill the container's width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure images fit nicely */
+}
+
+/* Keyframes for horizontal scrolling */
+@keyframes scrollX {
+    0% {
+        transform: translateX(0); /* Start at initial position */
+    }
+    100% {
+        transform: translateX(-100%); /* Scroll the entire width of the content */
+    }
+}
+
+/* Ensure no overflow or scaling issues */
+.auto-scroll-container {
+    white-space: nowrap; /* Prevent line wrapping */
+}
+
+.auto-scroll-content {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+ #blank {
+    align-items: center;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 60vh; 
+    
+    
+}
+.blankdoc {
+    
+    position: absolute;
+    top: 30%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    /* color:;  */
+    text-align: center; 
+}
+
+/* Optional: Styling for the text */
+h1 {
+    display: flex;
+    font-size: 3em;
+    margin: 0;
+    
+}
+p {
+    /* display: ; */
+    font-size: 1em;
+}
+
+h2{
+    /* margin-top: 500%; */
+   
+    font-size: 40px;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+button{
+    /* width: 20%;
+    height: 7%; */
+    padding: 14px 40px;
+
+}
+button:hover{
+    color: palevioletred;
+    border-color: palevioletred;
+    padding: 14px 50px;
+
+}
+#animation{
+    /* margin: 0;
+    padding: 0; */
+    top: 0;
+    position: relative;
+    /* box-sizing: border-box; */
+}
+.image-fader {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .image-fader img {
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    animation-name: imagefade;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+  }
+  
+  @keyframes imagefade {
+    0% {
+      opacity:1;
+    }
+    17% {
+      opacity:1;
+    }
+    25% {
+      opacity:0;
+    }
+    92% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  .image-fader img:nth-of-type(1) {
+    animation-delay: 6s;
+  }
+  .image-fader img:nth-of-type(2) {
+    animation-delay: 4s;
+  }
+  .image-fader img:nth-of-type(3) {
+    animation-delay: 2s;
+  }
+  .image-fader img:nth-of-type(4) {
+    animation-delay: 0;
+  }
+#brands{
+    width: 100%; /*Full-width container*/
+    height: 13vh;
+    /* overflow: hidden; Hide overflowing content */
+    position: relative;
+    background-color: #f0f0f0; /* Optional background */
+}
+.brandsimgs{
+    display: flex; /* Align items horizontally */
+     width: calc(300px * 3); /* Width for 3 images */
+}
+.brandsimgs img {
+    width: 100%; /* Adjust size */
+    height: 140%; /* Adjust size */
+    object-fit: cover; /* Ensure image fits nicely */
+    /* margin-right: 10px; Space between images */
+    /* border-radius: 5px; Optional rounded corners */
+    padding: 0%;
+    margin-right: 25%;
+}
+
+.lastheading{
+    display: flex;
+    font-size: 68px;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700; /* Bold weight */
+}
+.lastpara{
+    font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+}
+.row-container {
+    display: flex; /* Arrange items in a row */
+    justify-content: center; /* Center the row within the container */
+    gap: 30px; /* Space between the divs */
+    padding: 20px; /* Optional padding for the container */
+}
+
+.item {
+    text-align: center; /* Center content within each div */
+    max-width: 300px; /* Limit the width of each item */
+}
+
+.item img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain the aspect ratio */
+    
+}
+
+.item h1 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.item p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+.item h1:hover{
+    color: pink;
+}
+.container {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.spacer {
+    height: 50px; /* Adds space between the paragraph and the row */
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the tags */
+    margin-top: 20px;
+}
+
+.tag {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+}
+
+.tag h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.tag p {
+    font-size: 1rem;
+    color: #666;
+}
+
+
+/* Mobile-first approach */
+
+/* Base styles already in place for larger screens */
+
+/* Adjustments for tablet screens */
+@media (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+        height: auto; /* Allow height to adjust */
+        padding: 10px;
+    }
+    .navlinks {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navlinks li {
+        margin: 10px 0;
+    }
+    .icon-bar {
+        right: 5px; /* Adjust position for smaller screens */
+    }
+    #hero {
+        height: 100vh; /* Reduce height on smaller screens */
+    }
+    .firstheading {
+        font-size: 48px; /* Reduce font size */
+    }
+    .firstpara {
+        font-size: 12px; /* Smaller text */
+    }
+}
+
+/* Adjustments for phone screens */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .navlinks {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navlinks li {
+        margin: 8px 0;
+    }
+    #hero {
+        height: 90vh; /* Adjust hero height */
+    }
+    .firstheading {
+        font-size: 32px; /* Smaller font for hero heading */
+    }
+    .firstpara {
+        font-size: 10px; /* Smaller paragraph text */
+    }
+    .icon-bar {
+        top: auto;
+        bottom: 10px; /* Move icons to bottom */
+    }
+    #hoverimages {
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-box {
+        width: 100%; /* Full width for images */
+        height: auto;
+    }
+    .paragraph {
+        font-size: 12px; /* Smaller text */
+    }
+}
+
+/* Ultra-small screens (extra small phones) */
+@media (max-width: 480px) {
+    .firstheading {
+        font-size: 24px; /* Further reduce heading size */
+    }
+    .firstpara {
+        font-size: 10px; /* Smaller paragraph text */
+    }
+    .navlinks a {
+        font-size: 12px; /* Adjust link font size */
+    }
+    .team-container {
+        flex-direction: column; /* Stack team members vertically */
+    }
+    .t-box {
+        width: 100%; /* Full width for team boxes */
+    }
+    .auto-scroll-content img {
+        width: 100%;
+        height: auto; /* Adjust images for smaller screens */
+    }
+    .row-container {
+        flex-direction: column; /* Stack items vertically */
+        gap: 15px;
+    }
+    .item {
+        max-width: 90%; /* Reduce size of items */
+    }
+}
